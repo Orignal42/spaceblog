@@ -6,6 +6,8 @@ use App\Entity\BlogPost;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 
 class BlogPostType extends AbstractType
 {
@@ -14,8 +16,23 @@ class BlogPostType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('cover')
-            ->add('created_at')
+            ->add('cover',
+            FileType::class,
+            [
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '20000000k',
+                        'mimeTypes' => [
+                            'image/*',
+                        ],
+                        'mimeTypesMessage' => 'Please upload a valid document',
+                    ])
+                ],
+            ]
+        )
+            // ->add('created_at')
         ;
     }
 

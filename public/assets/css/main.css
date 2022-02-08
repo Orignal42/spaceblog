@@ -7,6 +7,23 @@
   margin-left: 5%;
 }
 
+.navette {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.navette img {
+  width: auto;
+  height: 20rem;
+}
+
+.articles {
+  margin: 0 0 2rem 5rem;
+}
+.articles h1 {
+  color: #DC5E44;
+}
+
 #footer {
   background-color: #DC5E44;
   height: 10rem;

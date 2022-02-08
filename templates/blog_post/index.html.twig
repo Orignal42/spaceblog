@@ -3,6 +3,7 @@
 {% block title %}BlogPost index{% endblock %}
 
 {% block body %}
+	{% include 'header.html.twig' %}
     <h1>BlogPost index</h1>
 
     <table class="table">
@@ -22,7 +23,7 @@
                 <td>{{ blog_post.id }}</td>
                 <td>{{ blog_post.title }}</td>
                 <td>{{ blog_post.content }}</td>
-                <td>{{ blog_post.cover }}</td>
+                	<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap">
                 <td>{{ blog_post.createdAt ? blog_post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
                     <a href="{{ path('blog_post_show', {'id': blog_post.id}) }}">show</a>
