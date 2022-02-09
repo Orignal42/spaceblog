@@ -20,16 +20,18 @@ h1{
     width: 100%;
 }
 .card{
+    border: none !important;
 margin: 3rem;
 border: 1px black solid;
 border-radius: 10%;
+height: 7rem;
+overflow: hidden;
  img{
         margin: auto;
         width: 100%;
-        height: auto;
+        height: 30rem;
         border-radius: 10%;
-        
-    }
+            }
 }
 .linkblog{
   

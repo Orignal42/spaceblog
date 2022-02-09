@@ -38,14 +38,18 @@ class BlogPostController extends AbstractController
      */
     public function show($id,BlogPostRepository $blogPostRepository): Response
     {
-       
-        $blogPost= $blogPostRepository->findByTitle($id);
-        // dd($blogPost);
+       $blogPost= $blogPostRepository->findBySlug($id);
+  
 
         return $this->render('blog_post/show.html.twig', [
             'blog_post' => $blogPost,
         ]);
     }
+
+
+
+
+
 }
 
 

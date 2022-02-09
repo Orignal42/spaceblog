@@ -4,13 +4,14 @@ namespace App\Entity;
 
 use App\Repository\BlogPostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=BlogPostRepository::class)
  */
 class BlogPost
 {
-  
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -37,6 +38,12 @@ class BlogPost
      * @ORM\Column(type="datetime_immutable")
      */
     private $created_at;
+
+    /**
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
 
     public function getId(): ?int
     {
@@ -91,6 +98,9 @@ class BlogPost
         return $this;
     }
 
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
 
-    
 }

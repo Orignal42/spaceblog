@@ -9,14 +9,16 @@
 		<div class="row">
 			<h1>Nos articles</h1>
 			<div class="cards">
-				{% for blog_post in blog_posts %}
+			{% for blog_post in blog_posts %}
 					<div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
-						<a href="{{ path ('blog_post_show',{'id':blog_post.title})}}">
+						<a href="{{ path ('blog_post_show',{'id':blog_post.slug})}}">
                         <div class='card'>
 							<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap" >
-							<p class='linkblog'>{{blog_post.title}}</p>
 						</div>
+						<div class='card titleindex'>
+							<p class='linkblog'>{{blog_post.title}}</p>
                         </a>
+					</div>
 					</div>
 				{% else %}
 					<tr>

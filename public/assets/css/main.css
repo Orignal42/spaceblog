@@ -11,11 +11,11 @@
 .back {
   margin-left: 5%;
   margin-top: 0.2%;
-  background-color: #DC5E44;
+  background-color: #DC5E44 !important;
   font-family: "Roboto Slab", serif;
   font-size: x-large;
   border-radius: 30%;
-  color: white;
+  color: white !important;
 }
 
 .navette {
@@ -40,14 +40,17 @@ h1 {
 }
 
 .card {
+  border: none !important;
   margin: 3rem;
   border: 1px black solid;
   border-radius: 10%;
+  height: 7rem;
+  overflow: hidden;
 }
 .card img {
   margin: auto;
   width: 100%;
-  height: auto;
+  height: 30rem;
   border-radius: 10%;
 }
 
