@@ -1,4 +1,24 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+{{ form_row(form.title) }}
+
+{% do form.content.setRendered %}
+{{ form_errors(form.content) }}
+<div>
+	<label for="blog_post_content" class="required">Content</label>
+	<textarea id="blog_post_content" name="blog_post[content]" required="required"></textarea>
+</div>
+
+
+{{ form_row(form.cover) }}
+
+{# https://w3c.github.io/webappsec-csp permet d'avoir une sécurité parfaite #}
+<button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+
+<script>
+	$(document).ready(function () {
+$('#blog_post_content').summernote();
+});
+</script>
+

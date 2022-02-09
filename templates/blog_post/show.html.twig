@@ -13,25 +13,23 @@
 				{# {{ dump (blog_post) }} #}
 				<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap">
 				<h1 class="contentblog">{{ blog_post.title }}</h1>
-				<div id="summernote">Hello Summernote
-					<p class="contentblog">
-						{{ blog_post.content }}</p>
+				<div>
+
+					{{ blog_post.content | raw }}
 				</div>
 			</div>
-			<p><i>
-				publié le
-				{{ blog_post.createdat|date('d-m-Y H:m') }}
-			</i></p>
+			<p>
+				<i>
+					publié le
+					{{ blog_post.createdat|date('d-m-Y H:m') }}
+				</i>
+			</p>
 		{% endfor %}
 	</div>
 
+
 	{% include 'footer.html.twig' %}
 
-   <script>
-   $(document).ready(function() {
-  $('#summernote').summernote();
-});
-   
-   </script>
+
 {% endblock %}
 

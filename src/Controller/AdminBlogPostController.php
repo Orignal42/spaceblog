@@ -47,6 +47,10 @@ class AdminBlogPostController extends AbstractController
             if ($cover) {
                 $blogPost->setCover($this->uploadFile($cover, $slugger, 'cover_directory'));
             }
+            // Sécurisation minimale xss 
+            // Pour une sécurité maximale, implémenter le header Content-Security-Policy
+            //  https://ikvasnica.com/blog/how-to-protect-php-application-from-xss-attacks-csp-3-nonce/
+            $blogPost->setContent(strip_tags($blogPost->getContent(),'<p><br><b><i><a><img><ul><li><ol><h1><h2><h3><h4><h5><h6>' ));           
             $blogPost->setCreatedAt(new DatetimeImmutable());
             $entityManager->persist($blogPost);
             $entityManager->flush();

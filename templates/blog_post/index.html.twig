@@ -14,11 +14,10 @@
 						<a href="{{ path ('blog_post_show',{'id':blog_post.slug})}}">
                         <div class='card'>
 							<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap" >
-						</div>
-						<div class='card titleindex'>
+						
 							<p class='linkblog'>{{blog_post.title}}</p>
+						</div>
                         </a>
-					</div>
 					</div>
 				{% else %}
 					<tr>
