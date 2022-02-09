@@ -90,4 +90,7 @@ class BlogPost
 
         return $this;
     }
+
+
+    
 }

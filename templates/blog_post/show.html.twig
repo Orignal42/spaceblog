@@ -3,36 +3,19 @@
 {% block title %}BlogPost{% endblock %}
 
 {% block body %}
-    <h1>BlogPost</h1>
+	{% include 'header.html.twig' %}
+  <div class="container">
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ blog_post.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ blog_post.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ blog_post.content }}</td>
-            </tr>
-            <tr>
-                <th>Cover</th>
-                <td>{{ blog_post.cover }}</td>
-            </tr>
-            <tr>
-                <th>Created_at</th>
-                <td>{{ blog_post.createdAt ? blog_post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('blog_post_index') }}">back to list</a>
-
-    <a href="{{ path('blog_post_edit', {'id': blog_post.id}) }}">edit</a>
-
-    {{ include('blog_post/_delete_form.html.twig') }}
+        {% for blog_post in blog_post %}
+        <div class="article">
+        {# {{ dump (blog_post) }} #}
+            		<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap"> 
+            <h1 class="contentblog">{{ blog_post.title }}</h1>             
+               <p class="contentblog"> {{ blog_post.content }}</p>                    
+            </div>
+               <p> publié le {{ blog_post.createdat|date('d-m-Y H:m') }} </p> 
+       {% endfor %}
+            </div>
+  
+	{% include 'footer.html.twig' %}
 {% endblock %}

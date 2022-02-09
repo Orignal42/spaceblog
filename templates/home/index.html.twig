@@ -30,19 +30,11 @@
 		</svg>
 
 	</div>
-    	<div class="articles">
-                 <h1>Nos articles</h1>
-	{% if blogs %}
-		{% for blog in blogs %}
-			{# {% include 'blog_post_index' %} #}
-			{# {{ render(controller('App\\Controller\\BlogPostController::index')) }} #}
+
 			
-				<div class='card'>
-						<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog.cover)}}" alt="Card image cap">
-					{{blog.title}}
-				</div>
-			{% endfor %}
-		{% endif %}
+			{{ render(controller('App\\Controller\\BlogPostController::index')) }}
 	</div>
+
+			{% include 'footer.html.twig' %}
 {% endblock %}
 

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="container">
+		<h1>Bienvenue sur la page de gestion de votre site</h1>
+		<div class='row'>
+
+			<div class='admincard'>
+				{% for blog_post in blogs_post %}
+					<div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
+							<a href="{{ path ('admin_blog_post_show',{'id':blog_post.id})}}">
+						<div class="card">
+							<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap">
+							<p>{{ blog_post.title}}</p>
+							<a class="btn btn-success admingreen" href="{{ path('admin_blog_post_edit', {'id': blog_post.id}) }}">Modifier</a>
+							{{ include('admin_blog_post/_delete_form.html.twig') }}
+						</div>
+						</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<a href="{{path('admin_blog_post_new')}}" class="btn btn-info  adminnew">nouvel article</a>
+		<a href="{{path('home')}}" class="btn btn-warning adminnew">Retour</a>
+		<a href="{{path('app_logout')}}" class="btn btn-warning adminnew">Déconnection</a>
+	</div>
+</div>{% endblock %}
+

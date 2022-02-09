@@ -1,0 +1,33 @@
+.admincard{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    
+    img{
+        width: 10rem;
+        margin: auto;
+        
+    }
+    .card{
+        word-break: break-all;
+    }
+
+    .admingreen{
+    width:8rem;
+       
+      margin: auto;
+    }
+
+}
+.adminnew{
+    width:8rem;
+      margin: auto;
+    position: relative;
+    bottom:1rem; left:1rem;
+}
+.deletebutton{
+  
+        width:8rem;
+    margin-top: 1rem;;
+}
+    

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap");
 .logoheader {
   background-color: #E4E6EC;
   width: 100%;
@@ -7,21 +8,113 @@
   margin-left: 5%;
 }
 
+.back {
+  margin-left: 5%;
+  margin-top: 0.2%;
+  background-color: #DC5E44;
+  font-family: "Roboto Slab", serif;
+  font-size: x-large;
+  border-radius: 30%;
+  color: white;
+}
+
 .navette {
   margin: 5rem;
   display: flex;
   justify-content: center;
 }
-.navette img {
-  width: auto;
-  height: 20rem;
+
+h1 {
+  color: #DC5E44;
+  font-family: "Roboto Slab", serif;
 }
 
 .articles {
   margin: 0 0 2rem 5rem;
 }
-.articles h1 {
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.card {
+  margin: 3rem;
+  border: 1px black solid;
+  border-radius: 10%;
+}
+.card img {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.linkblog {
   color: #DC5E44;
+  text-decoration: none !important;
+  text-align: center;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
+  font-size: xx-large;
+}
+
+.contentblog {
+  font-family: "Roboto Slab", serif;
+}
+
+a {
+  color: #DC5E44;
+  text-decoration: none !important;
+}
+
+body {
+  background-color: #E4E6EC;
+}
+
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.article img {
+  width: 100% !important;
+  height: 20rem;
+  border-radius: 15%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.admincard {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+.admincard img {
+  width: 10rem;
+  margin: auto;
+}
+.admincard .card {
+  word-break: break-all;
+}
+.admincard .admingreen {
+  width: 8rem;
+  margin: auto;
+}
+
+.adminnew {
+  width: 8rem;
+  margin: auto;
+  position: relative;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.deletebutton {
+  width: 8rem;
+  margin-top: 1rem;
 }
 
 #footer {

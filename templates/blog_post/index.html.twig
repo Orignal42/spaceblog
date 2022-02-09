@@ -1,42 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}BlogPost index{% endblock %}
+{% block title %}BlogPost index
+{% endblock %}
 
 {% block body %}
-	{% include 'header.html.twig' %}
-    <h1>BlogPost index</h1>
+	{# {% include 'header.html.twig' %} #}
+	<div class="container">
+		<div class="row">
+			<h1>Nos articles</h1>
+			<div class="cards">
+				{% for blog_post in blog_posts %}
+					<div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
+						<a href="{{ path ('blog_post_show',{'id':blog_post.title})}}">
+                        <div class='card'>
+							<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap" >
+							<p class='linkblog'>{{blog_post.title}}</p>
+						</div>
+                        </a>
+					</div>
+				{% else %}
+					<tr>
+						<td colspan="6">no records found</td>
+					</tr>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>Cover</th>
-                <th>Created_at</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for blog_post in blog_posts %}
-            <tr>
-                <td>{{ blog_post.id }}</td>
-                <td>{{ blog_post.title }}</td>
-                <td>{{ blog_post.content }}</td>
-                	<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap">
-                <td>{{ blog_post.createdAt ? blog_post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('blog_post_show', {'id': blog_post.id}) }}">show</a>
-                    <a href="{{ path('blog_post_edit', {'id': blog_post.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('blog_post_new') }}">Create new</a>
 {% endblock %}
+

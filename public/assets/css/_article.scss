@@ -1,0 +1,14 @@
+.article{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-flow: column;
+
+img{
+    width: 100% !important;
+    height: 20rem;
+    border-radius: 15%;
+    overflow:hidden;
+    object-fit:cover;
+}
+}

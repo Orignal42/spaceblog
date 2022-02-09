@@ -1,17 +1,55 @@
 .navette{
-    margin: 5rem;
+margin: 5rem;
 display: flex;
 justify-content: center;
 
-    img{
-        width: auto;
-        height: 20rem;
-    }
+ 
 }
-
+h1{
+    color:#DC5E44;
+    font-family: 'Roboto Slab', serif;
+}
 .articles{
     margin: 0 0 2rem 5rem;
-    h1{
-        color:#DC5E44;
+}
+
+.cards{
+    display: flex;
+    flex-flow: row wrap;
+   
+    width: 100%;
+}
+.card{
+margin: 3rem;
+border: 1px black solid;
+border-radius: 10%;
+ img{
+        margin: auto;
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+        
     }
 }
+.linkblog{
+  
+    color:#DC5E44;
+    text-decoration: none !important;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    font-size: xx-large;
+    
+    }
+
+    .contentblog{
+
+        font-family: "Roboto Slab", serif;
+
+    }
+
+    a{
+        color:#DC5E44;
+        text-decoration: none !important;
+    }
+   
