@@ -321,7 +321,7 @@ body {
 
 .adminnew {
   width: 8rem;
-  margin: auto;
+  margin-left: 2rem;
   position: relative;
   bottom: 1rem;
   left: 1rem;
@@ -333,7 +333,7 @@ body {
 }
 
 .adminbutton {
-  margin: 2rem 0 2rem 19rem;
+  margin: 1.5rem 0 0 5rem;
 }
 
 .cardadminshow {
