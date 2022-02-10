@@ -16,12 +16,29 @@
   font-size: x-large;
   border-radius: 30%;
   color: white !important;
+  z-index: 100;
 }
 
-.navette {
-  margin: 5rem;
-  display: flex;
-  justify-content: center;
+#rond {
+  background-color: #DC5E44 !important;
+  width: 5rem;
+  height: 3rem;
+  position: relative;
+  left: 55px !important;
+  top: -48px !important;
+  border-radius: 100%;
+  z-index: -3 !important;
+}
+
+#rond2 {
+  background-color: #DC5E44 !important;
+  width: 5rem;
+  height: 3rem;
+  position: relative;
+  left: 98px !important;
+  top: -96px !important;
+  border-radius: 100%;
+  z-index: -3 !important;
 }
 
 h1 {
@@ -29,27 +46,30 @@ h1 {
   font-family: "Roboto Slab", serif;
 }
 
-.articles {
-  margin: 0 0 2rem 5rem;
-}
-
 .cards {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+  margin: 1rem;
 }
 .cards .card {
   border: none !important;
-  margin: 3rem;
+  margin: 1%;
   border: 1px black solid;
   border-radius: 10%;
+  width: auto;
+  height: auto;
   overflow: hidden;
 }
-.cards .card img {
-  margin: auto;
+.cards .card .cardhomeimg {
+  height: 6rem;
+  overflow: hidden;
+}
+.cards .card .cardhomeimg .card-img {
   width: 100%;
-  height: auto;
+  height: 7rem;
   border-radius: 10%;
+  overflow: hidden;
 }
 
 .linkblog {
@@ -77,15 +97,28 @@ body {
 .article {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: column;
 }
-.article img {
-  width: 100% !important;
+
+.pictureshow {
+  height: 17rem;
+  overflow: hidden;
+}
+.pictureshow img {
+  width: 70rem !important;
   height: 20rem;
   border-radius: 15%;
   overflow: hidden;
   object-fit: cover;
+}
+
+.titleshow {
+  text-align: center;
+  margin: 1rem;
+}
+
+.publish {
+  margin-top: 1rem;
 }
 
 .admincard {
@@ -99,6 +132,8 @@ body {
 }
 .admincard .card {
   word-break: break-all;
+  padding: 1rem;
+  margin: 1rem;
 }
 .admincard .admingreen {
   width: 8rem;
@@ -120,6 +155,12 @@ body {
 
 .adminbutton {
   margin-top: 2rem;
+}
+
+.cardadminshow {
+  width: 10rem;
+  height: 5rem;
+  border-radius: 5%;
 }
 
 #footer {

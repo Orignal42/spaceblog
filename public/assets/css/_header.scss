@@ -14,4 +14,42 @@
     font-size: x-large;
     border-radius: 30%;
     color: white !important;
+    z-index: 100;
 }
+
+#rond {
+ 
+    background-color: #DC5E44  !important;
+    width: 5rem;
+    height: 3rem;
+    position: relative;
+    left:55px !important;top: -48px!important;
+    border-radius:100% ;
+    z-index: -3 !important;
+}
+
+#rond2 {
+ 
+    background-color: #DC5E44  !important;
+    width: 5rem;
+    height: 3rem;
+    position: relative;
+    left: 98px !important;
+    top: -96px !important;
+    border-radius:100% ;
+    z-index: -3 !important;
+}
+
+
+
+// #carre {
+//     z-index: 0;
+//     margin: -10rem;
+//     height:10rem;
+//     width: 10rem;
+//     background: purple;
+//     -ms-transform: rotate(45deg); /* Internet Explorer */
+//     -moz-transform: rotate(45deg); /* Firefox */
+//     -webkit-transform: rotate(45deg); /* Safari et Chrome */
+//     -o-transform: rotate(45deg); /* Opera */
+// }

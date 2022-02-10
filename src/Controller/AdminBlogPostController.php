@@ -55,7 +55,7 @@ class AdminBlogPostController extends AbstractController
             $entityManager->persist($blogPost);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_blog_post_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin_blog_post/new.html.twig', [
@@ -108,7 +108,7 @@ class AdminBlogPostController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_blog_post_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin', [], Response::HTTP_SEE_OTHER);
     }
 
 

@@ -8,26 +8,27 @@
 	<div class="container">
 
 		{% for blog_post in blog_post %}
-			<div
-				class="article">
-				{# {{ dump (blog_post) }} #}
-				<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap">
-				<h1 class="contentblog">{{ blog_post.title }}</h1>
+			<div class="article">
+				<div class="pictureshow">
+					<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap" style="width: 18rem;">
+				</div>
+				<div class="titleshow">
+					<h1 class="contentblog">{{ blog_post.title }}</h1>
+				</div>
 				<div>
-
 					{{ blog_post.content | raw }}
 				</div>
-			</div>
-			<p>
-				<i>
-					publié le
-					{{ blog_post.createdat|date('d-m-Y H:m') }}
-				</i>
-			</p>
-		{% endfor %}
+				<div class="publish">
+					<p>
+						<i>publié le
+							{{ blog_post.createdat|date('d-m-Y H:m') }}
+						</i>
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+
 	</div>
-
-
 	{% include 'footer.html.twig' %}
 
 

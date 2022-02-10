@@ -1,38 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}BlogPost{% endblock %}
+{% block title %}BlogPost
+{% endblock %}
 
 {% block body %}
-    <h1>BlogPost</h1>
+	<h1>BlogPost</h1>
+	<div class="container">
+		<div class='row'>
+			<table class="table">
+				<div class="articleadmin">
+					<tbody>
+						<tr>
+							<th>Id</th>
+							<td>{{ blog_post.id }}</td>
+						</tr>
+						<tr>
+							<th>Title</th>
+							<td>{{ blog_post.title }}</td>
+						</tr>
+						<tr>
+							<th>Content</th>
+							<td>{{ blog_post.content }}</td>
+						</tr>
+						<tr>
+							<th>Cover</th>
+							<td>{{ blog_post.cover }}</td>
+							<img class="card-img  cardadminshow" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap ">
+						</tr>
+						<tr>
+							<th>Created_at</th>
+							<td>{{ blog_post.createdAt ? blog_post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+						</tr>
+					</tbody>
+				</div>
+			</tbody>
+		</table>
+	</div>
+<a class="btn btn-info" href="{{ path('admin_blog_post_index') }}">Retour à la liste</a>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ blog_post.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ blog_post.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ blog_post.content }}</td>
-            </tr>
-            <tr>
-                <th>Cover</th>
-                <td>{{ blog_post.cover }}</td>
-            </tr>
-            <tr>
-                <th>Created_at</th>
-                <td>{{ blog_post.createdAt ? blog_post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+<a class="btn btn-success" href="{{ path('admin_blog_post_edit', {'id': blog_post.id}) }}">Modifier</a>
 
-    <a href="{{ path('admin_blog_post_index') }}">back to list</a>
+{{ include('admin_blog_post/_delete_form.html.twig') }}
+</div>
 
-    <a href="{{ path('admin_blog_post_edit', {'id': blog_post.id}) }}">edit</a>
-
-    {{ include('admin_blog_post/_delete_form.html.twig') }}
 {% endblock %}
+

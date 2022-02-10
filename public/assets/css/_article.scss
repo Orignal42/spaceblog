@@ -1,14 +1,26 @@
 .article{
 display: flex;
 justify-content: center;
-align-items: center;
 flex-flow: column;
 
-img{
-    width: 100% !important;
-    height: 20rem;
-    border-radius: 15%;
-    overflow:hidden;
-    object-fit:cover;
 }
+
+.pictureshow{
+height: 17rem;
+overflow: hidden;
+    img{
+        width: 70rem  !important;
+        height: 20rem;
+        border-radius: 15%;
+        overflow:hidden;
+        object-fit:cover;
+    }
 }
+.titleshow{
+    text-align: center;
+    margin: 1rem;
+}
+.publish{
+    margin-top:1rem;
+}
+
