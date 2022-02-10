@@ -99,10 +99,10 @@
             object-fit:cover;
         }
     }
-    
-.boutonrond{
-    margin-left: 2rem !important;
-}
+    .boutonrond{
+        margin-left: 2rem !important;
+    }   
+
 
 }
 
@@ -113,7 +113,7 @@
         width: 5.5rem;
         height: 3rem;
         position: relative;
-        left:60px !important;top: -48px!important;
+        left:67px !important;top: -48px!important;
         border-radius:100% ;
         z-index: -3 !important;
     }
@@ -124,7 +124,7 @@
         width: 5.5rem;
         height: 3rem;
         position: relative;
-        left: 100px !important;
+        left: 110px !important;
         top: -96px !important;
         border-radius:100% ;
         z-index: -3 !important;
@@ -133,7 +133,7 @@
     .back{
         margin-left: 5%;
         margin-top: 0.2%;
-        width: 5.5rem;
+        width: 6rem;
         height: 3rem;
         background-color: #DC5E44 !important;
         font-family: "Roboto Slab", serif;
@@ -155,7 +155,7 @@
     }
     
 .boutonrond{
-    margin-left: 2rem !important;
+    margin-left: 14rem !important;
 }
 
 }
