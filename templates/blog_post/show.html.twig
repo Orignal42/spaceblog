@@ -19,10 +19,10 @@
 					<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap" style="width: 18rem;">
 				</div>
 				<div class="titleshow">
-					<h1 class="contentblog">{{ blog_post.title }}</h1>
+					<h1 class="blogtitle">{{ blog_post.title }}</h1>
 				</div>
-				<div class="content">
-					{{ blog_post.content | raw }}
+				<div class="contentblog">
+					<p class="contentblogp">{{ blog_post.content | raw }}</p>
 				</div>
 				<div class="publish">
 					<p>

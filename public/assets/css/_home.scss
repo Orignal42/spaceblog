@@ -66,7 +66,7 @@
       
 }
 
-@media (min-width: 1000px) and (max-width: 2000px)
+@media (min-width: 1500px) and (max-width: 2000px)
 {
     
 h1{
@@ -127,3 +127,63 @@ h1{
 
 }
 
+@media (min-width: 1000px) and (max-width: 1500px)
+{
+    
+h1{
+    color:#DC5E44;
+    font-family: 'Roboto Slab', serif;
+}
+
+.cards{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 1rem;
+    .card{
+    border: none !important;
+    margin-bottom: 3%;
+    border: 1px black solid;
+    border-radius: 10%;
+    width: 15rem;
+    height: 13rem;
+   
+    .cardhomeimg{
+    height: 9rem;
+    overflow: hidden;
+        .card-img{
+            width: 100%;
+            height: 10rem;
+            border-radius: 10%;
+         
+        }
+    }
+        .card-body{
+            text-align: left !important;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+    }
+}
+.linkblog{
+  
+    color:#DC5E44;
+    text-decoration: none !important;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    font-size: xx-large;
+    
+    }
+
+    .contentblog{
+        font-family: "Roboto Slab", serif;
+    }
+
+    a{
+        color:#DC5E44;
+        text-decoration: none !important;
+    }
+   
+
+}

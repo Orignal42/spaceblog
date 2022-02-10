@@ -1,12 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit BlogPost{% endblock %}
+{% block title %}Edit BlogPost
+{% endblock %}
 
 {% block body %}
-    <h1>Edit BlogPost</h1>
-    {{ include('admin_blog_post/_form.html.twig', {'button_label': 'Update'}) }}
+	<div class='container'>
+		<h1>Edit BlogPost</h1>
+		{{ include('admin_blog_post/_form.html.twig', {'button_label': 'Modifier'}) }}
+		<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap" style="width: 18rem;">
+		<p class='blogeditadmin'>{{blog_post.content}}</p>
+		<a  class="btn btn-info btnform"href="{{ path('admin_blog_post_index') }}">Retour à la liste</a>
 
-    <a href="{{ path('admin_blog_post_index') }}">back to list</a>
-
-    {{ include('admin_blog_post/_delete_form.html.twig') }}
+		{{ include('admin_blog_post/_delete_form.html.twig') }}
+	</div>
 {% endblock %}
+

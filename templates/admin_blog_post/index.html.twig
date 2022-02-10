@@ -25,8 +25,8 @@
                 <td>{{ blog_post.cover }}</td>
                 <td>{{ blog_post.createdAt ? blog_post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a  class="btn btn-info" href="{{ path('admin_blog_post_show', {'id': blog_post.id}) }}">Voir</a>
-                    <a class="btn btn-success" href="{{ path('admin_blog_post_edit', {'id': blog_post.id}) }}">Modifier</a>
+                    <a  class="btn btn-info btnform" href="{{ path('admin_blog_post_show', {'id': blog_post.id}) }}">Voir</a>
+                    <a class="btn btn-success btnform" href="{{ path('admin_blog_post_edit', {'id': blog_post.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_blog_post_new') }}">Create new</a>
+    <a class="btn btn-info btnform" href="{{ path('admin_blog_post_new') }}">Nouvel Article</a>
 {% endblock %}

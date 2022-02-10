@@ -70,7 +70,60 @@
     align-items: center !important;
   }
 }
-@media (min-width: 1000px) and (max-width: 2000px) {
+@media (min-width: 1500px) and (max-width: 2000px) {
+  h1 {
+    color: #DC5E44;
+    font-family: "Roboto Slab", serif;
+  }
+
+  .cards {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 1rem;
+  }
+  .cards .card {
+    border: none !important;
+    margin-bottom: 3%;
+    border: 1px black solid;
+    border-radius: 10%;
+    width: 15rem;
+    height: 13rem;
+  }
+  .cards .card .cardhomeimg {
+    height: 9rem;
+    overflow: hidden;
+  }
+  .cards .card .cardhomeimg .card-img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 10%;
+  }
+  .cards .card .card-body {
+    text-align: left !important;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  .linkblog {
+    color: #DC5E44;
+    text-decoration: none !important;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    font-size: xx-large;
+  }
+
+  .contentblog {
+    font-family: "Roboto Slab", serif;
+  }
+
+  a {
+    color: #DC5E44;
+    text-decoration: none !important;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1500px) {
   h1 {
     color: #DC5E44;
     font-family: "Roboto Slab", serif;
@@ -194,7 +247,7 @@ body {
     width: 5.5rem;
     height: 3rem;
     position: relative;
-    left: 90px !important;
+    left: 80px !important;
     top: -96px !important;
     border-radius: 100%;
     z-index: -3 !important;
@@ -296,7 +349,13 @@ body {
   margin: 1rem 0 1rem 1rem;
 }
 
-.content {
+.contentblog {
+  color: black !important;
+  margin: 1%;
+}
+
+.contentblogp {
+  color: black !important;
   margin: 1%;
 }
 
@@ -375,6 +434,14 @@ body {
     left: -10px !important;
     top: 0;
   }
+  #footer p {
+    color: white;
+    font-size: x-large;
+  }
+  #footer svg {
+    width: 6rem;
+    height: auto;
+  }
 }
 @media (min-width: 1000px) and (max-width: 1500px) {
   #footer {
@@ -393,6 +460,14 @@ body {
     position: relative !important;
     left: -30px !important;
     top: 0;
+  }
+  #footer p {
+    color: white;
+    font-size: x-large;
+  }
+  #footer svg {
+    width: 6rem;
+    height: auto;
   }
 }
 @media (min-width: 1500px) and (max-width: 2000px) {
@@ -413,15 +488,16 @@ body {
     left: -70px !important;
     top: 0;
   }
-}
-p {
-  color: white;
-  font-size: x-large;
-}
 
-svg {
-  width: 6rem;
-  height: auto;
+  p {
+    color: white;
+    font-size: x-large;
+  }
+
+  svg {
+    width: 6rem;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
