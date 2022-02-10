@@ -4,10 +4,13 @@
 {% endblock %}
 
 {% block body %}
+	{% include 'header.html.twig' %}
 	<div class="container">
 		<div class="row">
-			<img src='{{ asset ("assets/images/nav.png")}}'>
-			{{ render(controller('App\\Controller\\BlogPostController::index')) }}
+		
+				<img class="nav"src='{{ asset ("assets/images/nav.png")}}'>
+				{{ render(controller('App\\Controller\\BlogPostController::index')) }}
+			
 		</div>
 	</div>
 	{% include 'footer.html.twig' %}

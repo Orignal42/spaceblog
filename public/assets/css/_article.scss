@@ -1,26 +1,187 @@
+@media (min-width: 200px) and (max-width: 1000px)
+{
+    .boutonrond{
+        margin-left: 7rem !important;
+    }
+    #rond { 
+        background-color: #DC5E44  !important;
+        width: 5rem;
+        height: 3rem;
+        position: relative;
+        left:20px !important;top: -48px!important;
+        border-radius:100% ;
+        z-index: -3 !important;
+    }
+    
+    #rond2 {
+     
+        background-color: #DC5E44  !important;
+        width: 5rem;
+        height: 3rem;
+        position: relative;
+        left: 70px !important;
+        top: -97px !important;
+        border-radius:100% ;
+        z-index: -3 !important;
+    }
+
+    .back{
+        margin-left: 5%;
+        width: 5rem  !important;
+        margin-top: 0.2%;
+        background-color: #DC5E44  !important;
+        font-family: "Roboto Slab", serif;
+        font-size: x-large;
+        border-radius: 30%;
+        color: white !important;
+        z-index: 100;
+    }
+
+    .pictureshow{
+        height: 17rem;
+        overflow: hidden;
+            img{
+                width: 44rem  !important;
+                height: 20rem;
+                overflow:hidden;
+                object-fit:cover;
+            }
+        }
+        
+
+}
+
+@media (min-width: 1000px) and (max-width: 1500px)
+{
+  
+    #rond { 
+        background-color: #DC5E44  !important;
+        width: 5.5rem;
+        height: 3rem;
+        position: relative;
+        left:40px !important;top: -48px!important;
+        border-radius:100% ;
+        z-index: -3 !important;
+    }
+    
+    #rond2 {
+     
+        background-color: #DC5E44  !important;
+        width: 5.5rem;
+        height: 3rem;
+        position: relative;
+        left: 90px !important;
+        top: -96px !important;
+        border-radius:100% ;
+        z-index: -3 !important;
+    }
+
+    .back{
+        margin-left: 5%;
+        margin-top: 0.2%;
+        width: 5.5rem;
+        height: 3rem;
+        background-color: #DC5E44 !important;
+        font-family: "Roboto Slab", serif;
+        font-size: x-large;
+        border-radius: 30%;
+        color: white !important;
+        z-index: 100;
+    }
+
+    
+.pictureshow{
+    height: 17rem;
+    overflow: hidden;
+        img{
+            width: 70rem  !important;
+            height: 20rem;
+            object-fit:cover;
+        }
+    }
+    
+.boutonrond{
+    margin-left: 2rem !important;
+}
+
+}
+
+@media (min-width: 1500px) and (max-width: 2000px)
+{
+    #rond { 
+        background-color: #DC5E44  !important;
+        width: 5.5rem;
+        height: 3rem;
+        position: relative;
+        left:60px !important;top: -48px!important;
+        border-radius:100% ;
+        z-index: -3 !important;
+    }
+    
+    #rond2 {
+     
+        background-color: #DC5E44  !important;
+        width: 5.5rem;
+        height: 3rem;
+        position: relative;
+        left: 100px !important;
+        top: -96px !important;
+        border-radius:100% ;
+        z-index: -3 !important;
+    }
+
+    .back{
+        margin-left: 5%;
+        margin-top: 0.2%;
+        width: 5.5rem;
+        height: 3rem;
+        background-color: #DC5E44 !important;
+        font-family: "Roboto Slab", serif;
+        font-size: x-large;
+        border-radius: 30%;
+        color: white !important;
+        z-index: 100;
+    }
+
+    
+.pictureshow{
+    height: 17rem;
+    overflow: hidden;
+        img{
+            width: 88rem  !important;
+            height: 20rem;
+            object-fit:cover;
+        }
+    }
+    
+.boutonrond{
+    margin-left: 2rem !important;
+}
+
+}
+
+
 .article{
 display: flex;
 justify-content: center;
 flex-flow: column;
-
-}
-
-.pictureshow{
-height: 17rem;
+background-color: white;
+margin:-3rem 0rem 0rem 0rem;
+border-radius: 1%;
 overflow: hidden;
-    img{
-        width: 70rem  !important;
-        height: 20rem;
-        border-radius: 15%;
-        overflow:hidden;
-        object-fit:cover;
-    }
+
 }
+
 .titleshow{
     text-align: center;
     margin: 1rem;
 }
 .publish{
-    margin-top:1rem;
+    margin:1rem 0 1rem 1rem;
 }
+
+.content{
+    margin: 1%;
+}
+
 

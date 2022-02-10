@@ -4,23 +4,21 @@
 {% endblock %}
 
 {% block body %}
-	{# {% include 'header.html.twig' %} #}
-
+	
 	<h1>Nos articles</h1>
 	<div class="cards">
 		{% for blog_post in blog_posts %}
-			<div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
+			<div class="col-md-12 col-sm-12 col-lg-4 col-xl-4 colu">
 				<a href="{{ path ('blog_post_show',{'id':blog_post.slug})}}">
 					<div class="card">
 						<div class='cardhomeimg'>
 							<img class="card-img" src="{{ asset ('uploads/cover/' ~ blog_post.cover)}}" alt="Card image cap">
 						</div>
 						<div class="card-body">
-							<h5 class="card-title text-center">{{blog_post.title}}</h5>
+							<h5 class="card-title">{{blog_post.title}}</h5>
 
 						</a>
 					</div>
-
 				</div>
 			</div>
 		{% else %}
@@ -28,7 +26,6 @@
 				<td colspan="6">no records found</td>
 			</tr>
 		{% endfor %}
-
 	</div>
 {% endblock %}
 

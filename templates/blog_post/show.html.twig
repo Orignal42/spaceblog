@@ -5,8 +5,14 @@
 
 {% block body %}
 	{% include 'header.html.twig' %}
+	<div class='boutonrond'>
+	<a href="{{path('home')}}" class="btn back">
+		<b>Retour</b>
+	</a>	
+	  <div id='rond'> </div>
+	   <div id='rond2'> </div>
+	   </div>
 	<div class="container">
-
 		{% for blog_post in blog_post %}
 			<div class="article">
 				<div class="pictureshow">
@@ -15,7 +21,7 @@
 				<div class="titleshow">
 					<h1 class="contentblog">{{ blog_post.title }}</h1>
 				</div>
-				<div>
+				<div class="content">
 					{{ blog_post.content | raw }}
 				</div>
 				<div class="publish">
@@ -29,8 +35,8 @@
 		</div>
 
 	</div>
-	{% include 'footer.html.twig' %}
 
+{% include 'footer.html.twig' %}
 
 {% endblock %}
 

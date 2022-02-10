@@ -5,22 +5,25 @@
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-
-.logo{
-    display: flex;
-    flex-flow: column;
+    margin-top: 1rem;
+    .logo {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        position: relative !important;
+        left: -70px !important;
+        top: 0;
+    }
   
     p {
         color: white;
+        font-size: x-large;
     }
-}
+
 svg{
-    width: 5rem;
+    width: 6rem;
     height: auto;
 }
-
-
-
 
 }
 
