@@ -83,7 +83,7 @@ class AdminBlogPostController extends AbstractController
         $form->handleRequest($request);
         $cover = $form->get('cover')->getData();
         if ($form->isSubmitted() && $form->isValid()) {
-
+            $blogPost->setContent(strip_tags($blogPost->getContent(),'<p><br><b><i><a><img><ul><li><ol><h1><h2><h3><h4><h5><h6>' ));  
             if ($cover) {
                 $blogPost->setCover($this->uploadFile($cover, $slugger, 'cover_directory'));
             }
